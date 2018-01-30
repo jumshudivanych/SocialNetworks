@@ -21,8 +21,7 @@ public class ChromeDriver implements Runnable {
         this.password = password;
     }
     public void run() {
-//цикл открывающий 5 вкладок
-        for(int i=0; i<2; i++) {
+
 
             //TODO ЗАПУСК Chrome
             System.setProperty("webdriver.chrome.driver","C:/idea/chromedriver.exe");
@@ -73,15 +72,23 @@ public class ChromeDriver implements Runnable {
             //переход на oklive
             driver.get("https://www.ok.ru/video/liveApp");
             //переход на конкретное видео
-            driver.get("https://ok.ru/live/561967800182");
+            //driver.get("https://ok.ru/live/561967800182");
 
             //находим элемент чат
-            WebElement messageField = driver.findElementByXPath("//div[@data-placeholder='Написать сообщение']");
+            //WebElement messageField = driver.findElementByXPath("//div[@data-placeholder='Написать сообщение']");
+            //TODO формат запроса findElementByXPath("//тэг[@атрибут='значение']");
             //пишем сообщение
-            messageField.sendKeys("Привет");
-            messageField.sendKeys(Keys.ENTER);
+            //messageField.sendKeys("Привет");
+            //messageField.sendKeys(Keys.ENTER);
 
-            //инициализация генератора случаиных чисел
+            //Пауза
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //инициализация генератора случаиных чисел
             //Random random = new Random();
             //получение случайного числа
             // a = random.nextInt(6);
@@ -100,7 +107,7 @@ public class ChromeDriver implements Runnable {
             //}
 
 
-        }
+
 
         /*
         //закрытие 4 вкладок
