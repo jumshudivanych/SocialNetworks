@@ -74,22 +74,23 @@ public class ChromeDriver implements Runnable {
             //переход на oklive
             driver.get("https://www.ok.ru/video/liveApp");
             //переход на конкретное видео
-            //driver.get("https://ok.ru/live/561967800182");
+            driver.get("https://ok.ru/live/426079887205");
 
             //находим элемент чат
             //WebElement messageField = driver.findElementByXPath("//div[@data-placeholder='Написать сообщение']");
             //TODO формат запроса findElementByXPath("//тэг[@атрибут='значение']");
             //пишем сообщение
-            //messageField.sendKeys("Привет");
-            //messageField.sendKeys(Keys.ENTER);
+           // messageField.sendKeys("Привет");
+           // messageField.sendKeys(Keys.ENTER);
 
             //Пауза
         try {
-            Thread.sleep(1000);
+            Thread.sleep(65000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
+        driver.quit();
         //инициализация генератора случаиных чисел
             //Random random = new Random();
             //получение случайного числа
