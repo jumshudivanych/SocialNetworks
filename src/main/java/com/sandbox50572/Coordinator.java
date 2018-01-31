@@ -16,6 +16,13 @@ public class Coordinator implements Runnable {
             Thread threadNext = new Thread(chromeDriver1);
             //стартуем новыи поток
             threadNext.start();
+
+            //пауза между созданием потоков
+            try {
+                Thread.sleep(60000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }

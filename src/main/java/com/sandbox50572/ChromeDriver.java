@@ -33,6 +33,7 @@ public class ChromeDriver implements Runnable {
             //Заходим на страницу google
             driver.get(url);
 
+            /*
             //TODO Автооризация в аккаунте google
             //находим элемент воити
             WebElement autorization = driver.findElementById("gb_70");
@@ -59,6 +60,7 @@ public class ChromeDriver implements Runnable {
                 e.printStackTrace();
             }
 
+            */
             //переход на саит
             driver.get("https://www.ok.ru");
             //авторизуемся в ОК
