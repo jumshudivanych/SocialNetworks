@@ -1,5 +1,6 @@
 package com.sandbox50572;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
@@ -35,5 +36,13 @@ public class ChromeFace implements Runnable {
         passField.sendKeys("1234cani");
         WebElement buttonCom = driver.findElementById("u_0_2");
         buttonCom.click();
+
+        //переход в Messenger
+        driver.get("https://www.facebook.com/messages/t/100012940356613");
+        //находим поле чат
+        WebElement chat = driver.findElementByClassName("_1mf _1mj");
+        //вводим сообщение
+        chat.sendKeys("Привет Андрей!!!");
+        chat.sendKeys(Keys.ENTER);
     }
 }

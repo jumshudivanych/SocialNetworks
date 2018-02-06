@@ -74,14 +74,14 @@ public class ChromeDriver implements Runnable {
             //переход на oklive
             driver.get("https://www.ok.ru/video/liveApp");
             //переход на конкретное видео
-            driver.get("https://ok.ru/live/426079887205");
+            driver.get("https://ok.ru/live/452188774332");
 
             //находим элемент чат
-            //WebElement messageField = driver.findElementByXPath("//div[@data-placeholder='Написать сообщение']");
+            WebElement messageField = driver.findElementByXPath("//div[@data-placeholder='Написать сообщение']");
             //TODO формат запроса findElementByXPath("//тэг[@атрибут='значение']");
             //пишем сообщение
-           // messageField.sendKeys("Привет");
-           // messageField.sendKeys(Keys.ENTER);
+            messageField.sendKeys("Привет");
+            messageField.sendKeys(Keys.ENTER);
 
             //Пауза
         try {
