@@ -8,17 +8,38 @@ public class Coordinator implements Runnable {
     }
     public void run() {
 
+        //TODO Вход в Ок
+        //создание объекта
+        Runnable chromeOk = new com.sandbox50572.ChromeOk("ChromeOk", "https://www.google.ru");
+        //создание дочернего потока
+        Thread threadNext = new Thread(chromeOk);
+        //стартуем новыи поток
+        threadNext.start();
+
+        //Пауза
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         //TODO Входим в ВК
         Runnable chromeVk = new com.sandbox50572.ChromeVk("MyVk", "https://www.google.ru");
-        Thread threadFacebook = new Thread(chromeVk);
-        threadFacebook.start();
+        Thread threadVk = new Thread(chromeVk);
+        threadVk.start();
 
-        /*
+        //Пауза
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         //TODO Входим в facebook
         Runnable chromeFace = new com.sandbox50572.ChromeFace("MyFacebook", "https://www.google.ru");
         Thread threadFacebook = new Thread(chromeFace);
         threadFacebook.start();
-        */
+
 
         /*
         //цикл запускающии Chrome в новых потоках

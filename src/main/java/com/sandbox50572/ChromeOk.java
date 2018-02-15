@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class ChromeDriver implements Runnable {
+public class ChromeOk implements Runnable {
 
     private static org.openqa.selenium.chrome.ChromeDriver driver;
     private static String url;//url загружаемои страницы
@@ -14,7 +14,7 @@ public class ChromeDriver implements Runnable {
     private String login;
     private String password;
 
-    public ChromeDriver(String name, String url) {
+    public ChromeOk(String name, String url) {
         this.name = name;
         this.url = url;
         this.login = login;
@@ -90,7 +90,9 @@ public class ChromeDriver implements Runnable {
             e.printStackTrace();
         }
 
-        driver.quit();
+        //TODO Закрытие браузера
+        //driver.quit();
+
         //инициализация генератора случаиных чисел
             //Random random = new Random();
             //получение случайного числа

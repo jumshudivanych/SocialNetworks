@@ -1,7 +1,7 @@
 package com.sandbox50572;
 
 /**
- * Hello world!
+ * Авторизация в соцсетях
  *
  */
 public class App 

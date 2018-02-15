@@ -61,13 +61,7 @@ public class ChromeVk implements Runnable{
         WebElement buttonCom = driver.findElementById("index_login_button");
         buttonCom.click();
 
-        //переход в Messenger
-        //driver.get("https://www.facebook.com/messages/t/100012940356613");
-        //находим поле чат
-       // WebElement chat = driver.findElementByClassName("_1mf _1mj");
-        //вводим сообщение
-        //chat.sendKeys("Привет Андрей!!!");
-        //chat.sendKeys(Keys.ENTER);
+
 
     }
 }

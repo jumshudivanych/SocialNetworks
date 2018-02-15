@@ -42,7 +42,7 @@ public class ChromeFace implements Runnable {
         //находим поле чат
         WebElement chat = driver.findElementByClassName("_1mf _1mj");
         //вводим сообщение
-        chat.sendKeys("Привет Андрей!!!");
+        chat.sendKeys("Привет  Андрей!!!");
         chat.sendKeys(Keys.ENTER);
     }
 }
